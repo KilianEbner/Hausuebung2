@@ -5,10 +5,44 @@
  */
 package com.mycompany.bsp2;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Consumer;
+
 /**
  *
  * @author user
  */
 public class HalloJavamitForEach {
+    List<String> ls= new ArrayList<>();
+
+    public HalloJavamitForEach() {
+        
+        ls.add("String 1");
+        ls.add("String 2");
+        ls.add("String 3");
+        ls.add("String 4");
+
+
+    }
+    
+    public void forEachLoop(){
+        for (String l : ls) {
+            System.out.println(l);
+        }
+    }
+    
+    public void lambdasPrinting(){
+        ls.forEach((String s) -> System.out.println(s));
+    }
+    
+    public void lambdasPrintingConsumer(){
+        Consumer<String> consumer = (String s) -> System.out.println(s);
+    }
+    
+    public void methodReference(){
+     ls.forEach(System.out :: print);
+    }
+    
     
 }
