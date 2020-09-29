@@ -41,8 +41,16 @@ public class HalloJavamitForEach {
     }
     
     public void methodReference(){
-     ls.forEach(System.out :: print);
+     ls.forEach(System.out :: println);
     }
     
-    
+    public static void main (String [] args){
+        HalloJavamitForEach hj= new HalloJavamitForEach();
+        System.out.println("Loop:");
+        hj.forEachLoop();
+        System.out.println("Lambdas:");
+        hj.lambdasPrinting();
+        System.out.println("Method-Referenz");
+        hj.methodReference();
+    }
 }
